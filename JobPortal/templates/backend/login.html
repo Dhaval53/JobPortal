@@ -1,0 +1,39 @@
+{% extends 'core.html' %}
+{% block content %}
+
+<style>
+        .custom-form{
+            border-radius: 10px;
+            margin-top: 30px;
+            width:30%;
+            margin: 30px auto;
+            alignment:center;
+            background:#ecf0f1;
+            padding: 5px;
+        }
+        .customform{
+            margin: 30px;
+        }
+        .formtitle{
+            text-align:center;
+        }
+    </style>
+
+<div class="custom-form">
+
+
+<form class="customform" method="post" action="login">
+    <h3 class="formtitle">Job Listing Admin Login</h3><br/>
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-default">Login</button>
+</form>
+    </div>
+
+{% endblock %}

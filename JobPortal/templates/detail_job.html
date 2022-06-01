@@ -1,0 +1,42 @@
+{% extends 'core.html' %}
+
+
+
+{% block content %}
+<style>
+    .custom-details-form{
+        margin:auto;
+        width:80%;
+        corner-radius:5px;
+        padding: 20px;
+        back
+    }
+</style>
+<div class="custom-details-form">
+    <address>
+  <strong>Company Address</strong><br>
+  {{ job_selected.hrAddress }}<br>
+  <abbr title="Phone">P:</abbr> {{ job_selected.hrPhoneNumber }}
+        Email: <a href="mailto:#">{{ job_selected.hrEmail }}</a><br/>
+        <b>Website:</b> {{ job_selected.hrWebSite }}</p>
+</address>
+
+<address>
+  <strong>Title: {{ job_selected.title }}</strong>
+    <b style="color:blue">DateLine:</b> <b style="color:red">{{ job_selected.dateLine }}</b>
+
+</address>
+
+
+    <h4 class="mdl-card__title-text">Job Reqirement</h4>
+    <p>{{ job_selected.reqirement }}</p>
+    <h4 class="mdl-card__title-text">Job Description</h4>
+    <p>{{ job_selected.description }}</p>
+
+</div>
+
+
+
+
+
+{% endblock %}
